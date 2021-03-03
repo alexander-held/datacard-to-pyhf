@@ -113,8 +113,10 @@ def get_sections_dict(datacard: list) -> dict:
     current_section = []
     for line in datacard:
         line_stripped = line.strip()
-        if len(line_stripped) > 0 and line_stripped[0] == "#":
-            # skip comments
+        if len(line_stripped) == 0 or (
+            len(line_stripped) > 0 and line_stripped[0] == "#"
+        ):
+            # skip comments and empty lines
             continue
         if line_stripped[0] == "-":
             # end of section
