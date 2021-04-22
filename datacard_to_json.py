@@ -92,7 +92,7 @@ def restructure_modifiers(
                     {
                         "name": syst_name,
                         "type": "normsys",
-                        "data": {"hi": norm_effect, "lo": 2 - norm_effect},
+                        "data": {"hi": norm_effect, "lo": 1 / norm_effect},
                     }
                 )
             elif syst_type == "gmN":
